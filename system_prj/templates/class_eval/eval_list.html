@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>授業評価</title>
+	</head>
+
+	<body>
+		<h2>授業評価一覧</h2>
+		<table border="1">
+			<tr>
+				<th>No.</th>
+				<th>科目名</th>
+				<th>単位取得難易度</th>
+				<th>課題の量</th>
+				<th>単位数</th>
+				<th>学期</th>
+				<th>担当教員</th>
+				<th>授業方法</th>
+				<th>成績評価方法</th>
+				<th>授業概要</th>
+			</tr>
+			{% for classes in data %}
+			<tr>
+				<td>{{ classes.class_id }}</td>
+				<td>{{ classes.title }}</td>
+				<td>{{ classes.difficulty }}</td>
+				<td>{{ classes.amount_of_tasks }}</td>
+				<td>{{ classes.credit }}</td>
+				<td>{{ classes.term }}</td>
+				<td>{{ classes.teacher }}</td>
+				<td>{{ classes.way }}</td>
+				<td>{{ classes.evaluation }}</td>
+				<td>{{ classes.about }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
