@@ -1,1 +1,2 @@
 # class_evaluation
+知識情報システム実習で開発した、授業の逆評価を見れるDjangoのwebアプリ。
